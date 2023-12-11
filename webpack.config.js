@@ -21,8 +21,16 @@ module.exports = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      use: ['babel-loader'],
-      include: path.join(__dirname, 'src')
+      exclude: /node_modules/,
+      use: [
+        {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      ],
+      include: path.resolve(__dirname, "src")
     }]
   }
 };

@@ -1,20 +1,23 @@
 import React from "react";
-import { render } from "react-dom";
-import DevTools from "mobx-react-devtools";
-
+import {createRoot} from "react-dom/client";
 import TodoList from "./components/TodoList";
 import TodoListModel from "./models/TodoListModel";
 import TodoModel from "./models/TodoModel";
 
 const store = new TodoListModel();
 
-render(
-  <div>
-    <DevTools />
+const styleLink = document.createElement("link");
+styleLink.rel = "stylesheet";
+styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+document.head.appendChild(styleLink);
+
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<div>
     <TodoList store={store} />
-  </div>,
-  document.getElementById("root")
-);
+</div>);
+
 
 store.addTodo("Get Coffee");
 store.addTodo("Write simpler code");

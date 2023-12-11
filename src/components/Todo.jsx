@@ -6,7 +6,7 @@ const Todo = observer(({ todo }) => (
     <input
       type="checkbox"
       checked={todo.finished}
-      onChange={() => (todo.finished = !todo.finished)}
+      onChange={() => (todo.toggle())}
     />
     {todo.title}
   </li>
