@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import { observable, action } from "mobx";
-import { observer } from "mobx-react";
-
-import Todo from "./Todo";
+import React from "react";
+import {action, observable} from "mobx";
+import {observer} from "mobx-react";
 import AuthorMenu from "./AuthorMenu";
 
 @observer

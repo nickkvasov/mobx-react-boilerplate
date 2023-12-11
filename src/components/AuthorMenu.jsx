@@ -1,14 +1,6 @@
 import React, {Component} from 'react'
-import {
-    Button,
-    Checkbox, Container,
-    Form, Header,
-    Input, Menu,
-    Radio,
-    Select,
-    TextArea,
-} from 'semantic-ui-react'
-import {observable, action, makeObservable} from 'mobx';
+import {Button, Form, Menu, TextArea,} from 'semantic-ui-react'
+import {action, makeObservable, observable} from 'mobx';
 import {observer} from "mobx-react";
 
 export class LocalStore {
