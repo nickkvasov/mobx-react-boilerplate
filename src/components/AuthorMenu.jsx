@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
-import {Accordion, Button, Checkbox, Form, Header, Icon, Input, Label, Menu, TextArea,} from 'semantic-ui-react'
+import {Accordion, Button, Checkbox, Form, Header, Menu, TextArea,} from 'semantic-ui-react'
 import {observer} from "mobx-react";
 import {AuthorMenuModel} from "./models/AuthorMenuModel";
+import {OutlineLabelInput} from "./OutlineLabelInput";
 
-const hadleClick = (e) => {
-    console.log(e);
-}
 
 const level1Panels = [
     { key: 'panel-1a', title: 'Level 1A', content: 'Level 1A Contents' },
@@ -14,10 +12,8 @@ const level1Panels = [
 
 const Level1Content = (
     <div>
-        <Input focus placeholder='' label={
-            (<Label as='a' corner={"right"} onClick={hadleClick}><Icon name='delete' /></Label>)
-        } ></Input>
-        <Accordion.Accordion panels={level1Panels} />
+        <OutlineLabelInput defaultValue={'EEEEEEEEEEEEEEEEEEEEE'}/>
+        <Accordion.Accordion panels={level1Panels}/>
     </div>
 )
 
