@@ -146,7 +146,7 @@ export default class AuthorMenu extends Component {
                     {/*    control={Checkbox}*/}
                     {/*    label='I agree to the Terms and Conditions'*/}
                     {/*/>*/}
-                    <Form.Field control={Button}>Submit</Form.Field>
+                    <Form.Field control={Button}>Generate Outline</Form.Field>
                 </Form>
             </div>
         )
